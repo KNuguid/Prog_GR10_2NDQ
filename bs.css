@@ -1,0 +1,305 @@
+body{
+    background-color: #010302;
+    margin :0;
+    font-family: 'Josefin Sans', sans-serif;    font-size: 15px;
+    overflow-x: hidden;
+}
+
+*::-webkit-scrollbar{
+    width: 0;
+}
+.container{
+    overflow: hidden;
+    height: max-content;
+
+}
+.banner{
+    height: 50vw;
+    position: relative;
+    overflow: hidden;
+}
+.banner .bg{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center bottom;
+    transition: 0.1s;
+}
+.banner .bg:nth-child(1){
+    background-image: url(main.jpg);
+}
+.banner .bg:nth-child(2){
+    background-image: url(enhanced_rustic_bread_scene.png);
+}
+.banner .bg:nth-child(3){
+    top: 32%;
+    text-align: center;
+} 
+.banner .bg:nth-child(3) h1,
+.banner .bg:nth-child(3) h5
+{
+    color: #f7ecdf;
+    font-size: 50px;
+    margin: 0;
+    text-shadow: 0 0px 30px #e4d4a6;
+    font-family: 'Lobster Two', 'Amita', sans-serif;
+}
+.banner .bg:nth-child(3) h1
+{
+    font-size: 11vw;
+}
+.banner .bg:nth-child(4){
+    background-image: url(cloud.png);
+}
+.banner .bg:nth-child(5){
+    background-image: url(cloud2.png);
+}
+.tab{
+    min-height: 100vh;
+    background-color: #010302;
+    z-index: 1;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat
+}
+.tab::before{
+    position: absolute;
+    height: 200px;
+    width: 100vw;
+    background: linear-gradient(
+        to top, #010302, transparent
+    );
+    content: '';
+    bottom: 100%;
+    left: 0;
+}
+.tab.tab1{
+    background:linear-gradient(
+        to top, #010302 0%, transparent 20% , #010302 80%
+   ),url(main.jpg);
+   ;
+}
+.tab.tab2{
+    background:linear-gradient(
+        to top, #010302 0%, transparent 20% , #010302 80%
+   ),url(main.jpg);
+}
+.tab.tab1 .content{
+    width: 100%;
+    max-width: 100%;
+    color: #e6e6e6;
+}
+.tab.tab1 .content .bes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.tab.tab1 .content .bes .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 300px;
+}
+.tab.tab1 .content .bes .left h1{
+    color: #f1e5d5;
+    font-size: 57px;
+    margin: 0px;
+    text-shadow: 0 0px 30px #ebe6d7;
+    font-family: 'Lobster Two', 'Amita', sans-serif;
+}
+.tab.tab1 .content .bes .left button{
+    background-color: transparent;
+    width: 150px;
+    height: 70px;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    border: 2px solid whitesmoke;
+    margin-top: 30px;
+    box-shadow: 0 0px 20px #ebe6d7;
+}
+.tab.tab1 .content .bes .left button a{
+    font-size: 2em;
+    font-weight: bold;
+    position: relative;
+      display: inline-block;
+      color: transparent; /* Text is initially transparent */
+      background: linear-gradient(to right, rgb(255, 247, 211) 50%, rgba(0, 0, 0, 0.7) 50%);
+      background-clip: text;
+      background-size: 200% 100%;
+      background-position: 0% 0%;
+      transition: background-position 0.5s ease-in-out; /* Smooth animation */
+      text-decoration: none;
+      background-color: transparent;
+}
+.tab.tab1 .content .bes .left button a:hover{
+    background-position: 100% 0%;
+}
+
+.tab.tab1 .content .bes .left p{
+    font-size: 15px;
+    font-family: 'Lobster Two', 'Amita', sans-serif;
+    font-weight: 0;
+    font-style: italic;
+    margin: 100px 10px 0 100px;
+    text-shadow: 0 0px 30px #000000;
+    color: #ffffff;
+}
+.tab.tab2 .content{
+    color: #eee;
+    width: 900px;
+    max-width: 90%;
+}
+.tab.tab2 .content .des{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 200px;
+}
+.carousel-container {
+    position: relative;
+    width: 40vw;
+    height: 70vh;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 300px;
+  }
+
+  .carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+  }
+
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Initially transparent */
+    transition: background 0.5s ease;
+    z-index: 1;
+  }
+
+  .slide:hover::before {
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  }
+
+  .caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(50px);
+    font-size: 4.2em;
+    font-weight: bolder;
+    color: white;
+    padding: 10px 20px;
+    opacity: 0;
+    transition: transform 2s ease, opacity 1s ease;
+    z-index: 2; /* Above the overlay */
+    font-family: 'Lobster Two', 'Amita', sans-serif;
+  }
+
+  .caption.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  .price {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    z-index: 2; /* Above the overlay */
+  }
+
+  .slide:hover .price {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  .pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgb(172, 148, 148);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .dot.active {
+    background-color: black;
+  }
+ h2{
+  font-family: 'Lobster Two', 'Amita', sans-serif;
+  font-size: 4rem;
+  }
+  h5{
+    font-family: 'Lobster Two', 'Amita', sans-serif;
+  font-size: 2rem;
+  }
+  .contact-container {
+    max-width: 600px;
+    margin-left: 30px;
+    text-align: center;
+  }
+  .contact-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .contact-info p {
+    font-size: 1.2em;
+  }
+  .social-icons a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 2em;
+    color: #333;
+  }
+  .social-icons a:hover {
+    color: #007bff;
+  }

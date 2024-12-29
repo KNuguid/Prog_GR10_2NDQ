@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopeeeeee</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    .all{
+        position: relative;
+    }
+    .all .main{
+        height: 100vh;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    .all .main .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(196, 202, 159);
+    }
+
+    .middle-text {
+      font-size: 2rem;
+      color: black;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .sliding {
+      font-size: 9em;
+      color: rgb(65, 55, 55);
+      position: absolute;
+      z-index: 1;
+      will-change: transform;
+      text-shadow: 0 0px 80px #ffffff;
+    }
+
+    .top-left {
+      top: 35%;
+      left: 20%;
+      transform: translate(-100%, -50%);
+    }
+
+    .bottom-right {
+      top: 45%;
+      right: 20%;
+      transform: translate(100%, -50%);
+    }
+
+    .all .main .second-section {
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-attachment: fixed;
+      background-image: url('eating.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .main .second-section div {
+      text-align: center;
+      color: white;
+    }
+
+    .main .second-section h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .main .second-section p {
+      font-size: 1.5rem;
+      max-width: 800px;
+    }
+
+    .main .third-section {
+      background-color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+      background-image: url('bread1.webp');
+      height: 100vh;
+    }
+
+    .main .third-section h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .main .third-section .product-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .main .third-section .product-gallery .product {
+      width: 200px;
+      height: 200px;
+      background-color: #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    .main .third-section .product-gallery .product img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .main .third-section .product-gallery .product .price {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      padding: 5px 10px;
+      font-size: 2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .main .third-section .product-gallery .product:hover {
+      transform: scale(1.05);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #333;
+    }
+
+    .main .third-section .product-gallery .product:hover .price {
+      opacity: 1;
+    }
+    .main .third-section .product-gallery .new-product {
+      width: 200px;
+      height: 200px;
+      background-color: #ddd;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+      margin-top: 40px;
+    }
+
+    .main .third-section .product-gallery .new-product img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .main .third-section .product-gallery .new-product .price {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      padding: 5px 10px;
+      font-size: 2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .main .third-section .product-gallery .new-product:hover {
+      transform: scale(1.05);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #333;
+    }
+
+    .main .third-section .product-gallery .new-product:hover .price {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="all">
+    <div class="main">
+      <!-- virst section-->
+      <div class="container">
+        <h1 class="sliding top-left">Welcome to</h1>
+        <h1 class="sliding bottom-right">Bro Ski</h1>
+        <p class="middle-text">
+          Explore our delightful range of <br>breads and 
+          discover the perfect treat for <br>yourself or a loved one.
+        </p>
+      </div>
+
+      <div class="second-section">
+        <div>
+          <h2>Explore Our Exquisite Collections</h2>
+          <p>
+            Discover the delightful assortment of our artisanal chocolates, carefully <br>curated into categories that celebrate the elegance of chocolate <br>craftsmanship.
+          </p>
+        </div>
+      </div>
+
+      <!-- 1 row -->
+      <div class="third-section">
+        <h2>Our Products</h2>
+        <div class="product-gallery">
+          <div class="product">
+            <img src="bread1.webp" alt="Bread Loaf">
+            <div class="price">&#8369;133</div>
+          </div>
+          <div class="product">
+            <img src="bread2.jpg" alt="Croissant">
+            <div class="price">&#8369;121</div>
+          </div>
+          <div class="product">
+            <img src="bread3.jpg" alt="Baguette">
+            <div class="price">&#8369;112</div>
+          </div>
+          <div class="product">
+            <img src="bread4.jpg" alt="Dough">
+            <div class="price">&#8369;111</div>
+          </div>
+          <div class="product">
+            <img src="bread5.jpg" alt="Artisan Bread">
+            <div class="price">&#8369;144</div>
+          </div>
+        </div>
+
+        <!-- 2 Row -->
+        <div class="product-gallery">
+          <div class="new-product">
+            <img src="bread6.jpg" alt="Cake">
+            <div class="price">&#8369;131</div>
+          </div>
+          <div class="new-product">
+            <img src="bread7.jpg" alt="Blueberry Muffin">
+            <div class="price">&#8369;133</div>
+          </div>
+          <div class="new-product">
+            <img src="bread8.jpg" alt="Chocolate Cookie">
+            <div class="price">&#8369;145</div>
+          </div>
+          <div class="new-product">
+            <img src="bread9.jpg" alt="Brownie">
+            <div class="price">&#8369;154</div>
+          </div>
+          <div class="new-product">
+            <img src="bread10.jpg" alt="Scone">
+            <div class="price">&#8369;120</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // for scroll animation sa 1st sec
+    window.addEventListener("scroll", () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const progress = scrollY / (document.body.scrollHeight - windowHeight);
+      const h1TopLeft = document.querySelector(".top-left");
+      const h1BottomRight = document.querySelector(".bottom-right");
+      // Calcculation
+      const topLeftX = -60 + progress * 100; 
+      const bottomRightX = 60 - progress * 100; 
+      // effects
+      h1TopLeft.style.transform = `translate(${topLeftX}%, -50%)`;h1BottomRight.style.transform = `translate(${bottomRightX}%, -50%)`;
+    });
+  </script>
+</body>
+</html>
