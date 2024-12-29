@@ -15,3 +15,6 @@ Welcome to Bro-Ski Shop, your destination for fresh, delicious, and high-quality
 - CSS3: Styling, including animations and responsive design.
 - JavaScript: Enables carousel functionality and Funtion for parallax effect.
 - Google Fonts: Adds custom typography for a polished look.
+
+![OVERVIEW1](https://github.com/user-attachments/assets/8a85e96d-b338-4645-9254-4620e0284e52)
+![OV2](https://github.com/user-attachments/assets/9c626b44-d6ce-4dac-b48b-0c1f781252d9)
